@@ -180,9 +180,9 @@ for k in range(0,500): #to get a distribution of the net winnings each simulatio
 
 	for roundNumber in range(0,numberOfRounds):
 		if trueCount <= 0 :
-			bet = 1 #the minimum bet unit
+			bet = 6 #the minimum bet unit
 		else:
-			bet = trueCount*2
+			bet = 6
 		playerHand = []
 		dealerHand = []
 
@@ -212,9 +212,9 @@ for k in range(0,500): #to get a distribution of the net winnings each simulatio
 
 		if playerHand2 != []:
 			if trueCount <= 0 :
-				bet2 = 1 #the minimum bet unit
+				bet2 = 6 #the minimum bet unit
 			else:
-				bet2 = trueCount**2
+				bet2 = 6
 			playerAction2 = strategy(playerHand2, dealerUpcard)
 			while playerAction2 != "S":
 				if playerAction2 == "H":
@@ -261,7 +261,7 @@ for k in range(0,500): #to get a distribution of the net winnings each simulatio
 						winner = "draw"
 
 		if winner == "player":
-			if dealerHandValue == "Blackjack":
+			if playerHandValue == "Blackjack":
 				profit = 1.5 * bet
 			else:
 				profit = bet
@@ -297,7 +297,7 @@ for k in range(0,500): #to get a distribution of the net winnings each simulatio
 								winner2 = "draw"
 
 			if winner == "player":
-				if dealerHandValue == "Blackjack":
+				if playerHandValue == "Blackjack":
 					profit += 1.5 * bet2
 				else:
 					profit += bet2
