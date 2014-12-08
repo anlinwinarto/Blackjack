@@ -296,12 +296,12 @@ for k in range(0,500): #to get a distribution of the net winnings each simulatio
 							else: #player also busts
 								winner2 = "draw"
 
-			if winner == "player":
+			if winner2 == "player":
 				if playerHandValue == "Blackjack":
 					profit += 1.5 * bet2
 				else:
 					profit += bet2
-			elif winner == "dealer":
+			elif winner2 == "dealer":
 				profit += -bet2
 			else: #push/draw
 				profit += 0
